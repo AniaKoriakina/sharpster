@@ -5,11 +5,17 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'main/index.html')
+    data = {
+        'title': 'Главная страница',
+    }
+    return render(request, 'main/index.html', data)
 
 
 def trends(request):
-    return render(request, 'main/index.html')
+    data = {
+        'title': 'Востребованность',
+    }
+    return render(request, 'main/trends.html', data)
 
 
 def geography(request):
