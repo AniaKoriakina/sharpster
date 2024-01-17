@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <aside>
+    <div class="logo-container">
+        <img src="{% static 'main/img/logo.png' %}" alt="logo">
+        <span class="logo">Sharpster</span>
+    </div>
+    <h3>Навигация</h3>
+    <ul>
+        <a href="/"><li><i class="fas fa-home"></i></i>Главная страница</li></a>
+        <a href="/trends"><li><i class="fas fa-chart-line"></i>Востребованность</li></a>
+        <a href="/geography"><li><i class="fas fa-map-marked-alt"></i>География</li></a>
+        <a href="/skills"><li><i class="fas fa-chalkboard-teacher"></i>Навыки</li></a>
+        <a href="/vacancies"><li><i class="fas fa-briefcase-medical"></i>Последние вакансии</li></a>
+    </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
