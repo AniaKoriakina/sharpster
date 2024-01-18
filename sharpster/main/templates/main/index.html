@@ -11,8 +11,22 @@
         <img src="{% static 'main/img/programmer3.jpg' %}" alt="Description of the image">
     </div>
     <div>
-        <h1>C# программист</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        {% for el in main_content %}
+            <div class="main-content">
+                <h1>{{ el.title }}</h1>
+                <p>{{ el.introduction }}</p>
+                <h2>{{ el.responsibilities_title }}</h2>
+                <p>{{ el.responsibilities_description }}</p>
+                <h2>{{ el.requirements_title }}</h2>
+                <p>{{ el.requirements_description }}</p>
+                <h2>{{ el.development_prospects_title }}</h2>
+                <p>{{ el.development_prospects_description }}</p>
+            </div>
+        {% endfor %}
     </div>
+
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'main/js/main.js' %}"></script>
 {% endblock %}

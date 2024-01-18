@@ -16,3 +16,17 @@ class Vacancy(models.Model):
     class Meta:
         verbose_name = 'Вакансии'
         verbose_name_plural = 'Вакансии'
+
+
+class Trends(models.Model):
+    title = models.CharField("Заголовок", max_length=255)
+    table_file_name = models.CharField("Путь к HTML файлу таблицы", max_length=255)
+    image_path = models.CharField("Путь к картинке", max_length=255)
+    analytics = models.TextField("Аналитика")
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Аналитика востребованности'
+        verbose_name_plural = 'Аналитика востребованности'

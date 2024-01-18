@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import CSharpProgrammer
+
 
 # Create your views here.
 
 def index(request):
+    main_content = CSharpProgrammer.objects.all()
     data = {
         'title': 'Главная страница',
+        'main_content': main_content,
     }
     return render(request, 'main/index.html', data)
 
@@ -28,3 +32,4 @@ def skills(request):
 
 def vacancies(request):
     return render(request, 'main/index.html')
+
