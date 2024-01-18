@@ -8,16 +8,16 @@ csv_file_path = 'media/vacancies.csv'
 data = pd.read_csv(csv_file_path)
 
 for index, row in data.iterrows():
-    description = strip_tags(row['description'])
-    description = BeautifulSoup(description, 'html.parser').get_text()
+    key_skills = strip_tags(row['key_skills'])
+    description = BeautifulSoup(key_skills, 'html.parser').get_text()
     Vacancy.objects.create(
         title=row['name'],
-        description=description,
+        key_skills=row['key_skills'],
         salary_min=row['salary_from'],
         salary_max=row['salary_to'],
         currency=row['salary_currency'],
         publication_date=timezone.datetime.strptime(row['published_at'], "%Y-%m-%dT%H:%M:%S%z").date(),
-        profession=row['area_name']
+        area_name=row['area_name']
     )
 
 print("Данные успешно импортированы в базу данных.")

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'main',
     'trends',
+    'geography',
     'django_extensions',
     "django.contrib.admin",
     "django.contrib.auth",
