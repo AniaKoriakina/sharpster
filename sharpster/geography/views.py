@@ -4,9 +4,13 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 
+from .models import Geography
+
 
 def geography(request):
+    geography = Geography.objects.all()
     data = {
         'title': 'География',
+        'geography': geography,
     }
     return render(request, 'geography/geography.html', data)
