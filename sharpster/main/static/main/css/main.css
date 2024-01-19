@@ -181,6 +181,15 @@ main .features p {
     max-width: 60%;
     overflow-x: auto;
 }
+.skills-container {
+    max-height: max;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+}
+
 
 .avg-salary-table {
     width: 100%;
@@ -207,6 +216,16 @@ main .features p {
 }
 
 .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.image-skills-container {
+    max-width: 100%;
+    margin-top:20px;
+}
+
+.image-skills-container img {
     width: 100%;
     height: auto;
 }

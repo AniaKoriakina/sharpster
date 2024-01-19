@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="title-container">{{ title }}</h1>
+    {% for el in skills %}
+        <div class="text-container">
+            <h2>{{ el.title }}</h2>
+        </div>
+        <div class="skills-container">
+            {% include el.table_file_name %}
+        </div>
+        <div class="image-skills-container">
+            <img src="{{ el.image.url }}" alt="{{ el.title }}">
+        </div>
+        <div class="caption-geography">
+            <p>{{ el.analytics|safe }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

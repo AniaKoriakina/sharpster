@@ -25,6 +25,7 @@ urlpatterns = [
     path("", include("main.urls")),
     path("trends/", include("trends.urls")),
     path("geography/", include("geography.urls")),
+    path("skills/", include("skills.urls")),
 ]
 
 
