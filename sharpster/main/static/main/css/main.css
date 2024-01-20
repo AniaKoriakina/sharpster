@@ -14,6 +14,16 @@ aside {
     padding: 20px;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    color: #636363;
+    margin-top: auto;
+    font-family: Roboto;
 }
 
 aside img {
@@ -137,7 +147,7 @@ main .features p {
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    height: 100%; /* Set a fixed height for the main content */
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -194,7 +204,6 @@ table {
 .avg-salary-table {
     width: 100%;
     border-collapse: collapse;
-    /* Add any additional styling for your table here */
 }
 
 .text-container {
@@ -209,6 +218,14 @@ table {
     margin-bottom: 50px;
     font-family: Poppins;
     margin-top: 20px;
+}
+.vacancy-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Poppins;
+    margin-top: 20px;
+    color: #e35d17;
+    font-size: 40px;
 }
 
 .image-container {
@@ -253,3 +270,63 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
+
+.title-container {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.vacancy-list {
+    list-style-type: none;
+    padding: 0;
+    font-family: Roboto;
+}
+
+.vacancy-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.vacancy-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.vacancy-info {
+    margin: 5px 0;
+}
+
+.vacancy-description {
+    whit-space: pre-wrap;
+    margin-bottom: 5px;
+}
+
+.vacancy-list ul,
+    .vacancy-list ol {
+        color: #fff;
+        padding-left: 20px;
+    }
+
+    .vacancy-list li {
+        margin: 5px 0;
+    }
+
+.vacancy-item b {
+    color: #305a9a;
+    font-size: 20px;
+    font-family: Poppins
+    text-align:center
+}
+
+.aside-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'main',
     'trends',
     'geography',
+    'latest_vacancies',
     'skills',
     'django_extensions',
     "django.contrib.admin",

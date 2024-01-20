@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="title-container">{{ title }}</h1>
+    <ul class="vacancy-list">
+        {% for vacancy in vacancies %}
+            <li class="vacancy-item">
+                <h2 class="vacancy-title">{{ vacancy.name }}</h2>
+                <p class="vacancy-info"><b>Оклад</b>:<br> {{ vacancy.salary }}</p>
+                <p class="vacancy-info"><b>Регион</b>:<br> {{ vacancy.region }}</p>
+                <p class="vacancy-info"><b>Дата публикации</b>:<br> {{ vacancy.published_at }}</p>
+                <p class="vacancy-info"><b>Компания</b>:<br> {{ vacancy.company_name }}</p>
+                {% if vacancy.key_skills %}
+                    <p class="vacancy-info"><b>Ключевые навыки</b>:<br> {{ vacancy.key_skills|join:", " }}</p>
+                {% endif %}
+                <p class="vacancy-description"><b>Описание</b>:<br> {{ vacancy.description|safe }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

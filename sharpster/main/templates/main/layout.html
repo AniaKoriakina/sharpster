@@ -23,8 +23,12 @@
         <a href="{% url 'trends_home' %}"><li><i class="fas fa-chart-line"></i>Востребованность</li></a>
         <a href="{% url 'geography' %}"><li><i class="fas fa-map-marked-alt"></i>География</li></a>
         <a href="{% url 'skills' %}"><li><i class="fas fa-chalkboard-teacher"></i>Навыки</li></a>
-        <a href="/vacancies"><li><i class="fas fa-briefcase-medical"></i>Последние вакансии</li></a>
+        <a href="{% url 'latest_vacancies' %}"><li><i class="fas fa-briefcase-medical"></i>Последние вакансии</li></a>
     </ul>
+    <footer class="footer">
+        <p>Корякина Анна Владимировна</p>
+        <p>РИ-220933</p>
+    </footer>
     </aside>
     <main>
         {% block content %}
